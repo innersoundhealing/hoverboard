@@ -25,7 +25,7 @@
       "label": "Home"
     },
     {
-      "route": "Reviews",
+      "route": "reviews",
       "permalink": "/reviews/",
       "label": "Reviews"
     },
@@ -35,7 +35,7 @@
       "label": "Schedule"
     },
     {
-      "route": "Over mij",
+      "route": "aboutme",
       "permalink": "/about-me/",
       "label": "Over mij"
     },
