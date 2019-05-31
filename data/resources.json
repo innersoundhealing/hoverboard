@@ -2,7 +2,7 @@
   "title": "Inner soundhealing",
   "description": "Luister naar je innerlijke stem",
   "image": "images/social-share.jpg",
-  "keywords": "event, gdg, gde, devfest, google, programming, android, chrome, polymer, developers, web, cloud, androiddev",
+  "keywords": "klankschalen, den haag, soundhealing, chakra's, tingsha, deep tissue massage, geluidstherapie, trillingen, moment voor jezelf, soundbowls, nepal, zintuigen",
   "dates": "October 12-13, 2018",
   "partnershipProposition": "https://bit.ly/dfua17-partners",
   "share": "Share",
@@ -12,9 +12,6 @@
   "partnershipResources": "Partnership Resources",
   "eventResources": "Event Resources",
   "buyTicket": "maak een afspraak",
-  "signIn": "Sign in",
-  "signOut": "Sign out",
-  "viewHighlights": "View Highlights",
   "offlineMessage": "You can still work offline.",
   "cachingComplete": "Caching complete! Future visits will work offline.",
   "newVersionAvailable": "A new version of this app is available.",
@@ -111,11 +108,11 @@
   "subscribeNote": "No spam, only the latest news and updates!",
   "codeOfConduct": "Code of Conduct",
   "aboutBlock": {
-    "title": "What you need to know, before you ask.",
+    "title": "Klankschalen en hun helende kracht",
     "callToAction": {
       "featuredSessions": {
-        "description": "GDG DevFest Ukraine brings together the world class experts in Android, Web and Cloud technologies to Lviv for 2 days of sessions, workshops and showcases.",
-        "label": "Explore featured session",
+        "description":"Sta je weleens stil om te luisteren naar je innerlijke stem? Je lichaam maakt vaak genoeg geluiden om je te vertellen over wat je nodig hebt of wat je juist beter zou kunnen laten: energie in- en uitvoer, de balans van de chakra’s, maar hoor je deze geluiden ook? Tijdens mijn meditaties schenken we hier aandacht aan. Vaak komen mensen helemaal niet aan pauze toe in hun drukke dagelijkse bestaan en kunnen ze op ten duur vermoeidheid, slaapproblemen of emotionele disbalans ervaren. Klankschalen kunnen je hierbij helpen. Door klankschalen aan te slaan of te bestrijken geeft de schaal een klank en een trilling af. De klanken zorgen ervoor dat je in een meditatieve staat terechtkomt, in je onderbewustzijn. De trillingen zijn krachtig en verplaatsten zich snel door ons lichaam. Omdat het lichaam voor 80% uit water bestaat bewegen al je cellen mee en dit zorgt voor een innerlijke massage. Je zintuigen staan op scherp terwijl je lichaam zich diep kan ontspannen en om de energieën in je lichaam weer te laten stromen waar wellicht blokkades zitten.",
+        "label": "Meer weten over klankschalen",
         "link": "https://www.youtube.com/playlist?list=PLt8lEzcLNl31AouwDkbLbLARlQFwNS2en"
       },
       "howItWas": {
@@ -126,29 +123,29 @@
     },
     "statisticsBlock": {
       "attendees": {
-        "label": "Attendees",
-        "number": "900"
+        "label": "Aantal jaren dat klankschalen worden gebruikt in het westen",
+        "number": "90"
       },
       "days": {
-        "label": "Days",
-        "number": "2"
+        "label": "Aantal jaren dat klankschalen worden gebruikt",
+        "number": "40.000"
       },
       "sessions": {
-        "label": "Sessions",
-        "number": "50"
+        "label": "Aantal voordelen klankschalentherapie",
+        "number": "20"
       },
       "tracks": {
-        "label": "Tracks",
-        "number": "4"
+        "label": "Chakra's",
+        "number": "7"
       }
     }
   },
   "ticketsBlock": {
-    "title": "Tickets",
-    "ticketsDetails": "Tickets grant access to all conference sections, coffee breaks, lunch and party. Accommodation is NOT included in the ticket price.",
-    "soldOut": "You missed it!",
-    "notAvailableYet": "Not available yet",
-    "save": "Save ${discount}% today"
+    "title": "Evenementen",
+    "ticketsDetails": "Neem contact op als je deel wilt nemen aan een evenement",
+    "soldOut": "Chakra soundbath",
+    "notAvailableYet": "Deep tissue sound masssage",
+    "save": "Aura cleansing"
   },
   "partnersBlock": {
     "title": "Partners",
@@ -162,10 +159,10 @@
     "toast": "We will contact you soon!"
   },
   "featuredVideos": {
-    "title": "DFUA'16 featured videos",
+    "title": "Video's met meditatieve muziek en klankschalen",
     "callToAction": {
-      "label": "See all videos",
-      "link": "https://www.youtube.com/playlist?list=PLt8lEzcLNl31AouwDkbLbLARlQFwNS2en"
+      "label": "Bekijk video's",
+      "link": "https://www.youtube.com/channel/UCUG-u74jwyl0Ze3EzRfC-0Q/videos"
     }
   },
   "blog": {
@@ -259,7 +256,7 @@
     "image": "/images/team.jpg",
     "blocks": [
       {
-        "title": "Organizer",
+        "title": "Wie ben ik",
         "description": "<a href='http://lviv.gdg.org.ua' target='_blank'>GDG Lviv</a> with support of 10 GDGs from all around Ukraine is proud organizer of DevFest Ukraine",
         "callToAction": {
           "label": "Open team page",
@@ -267,8 +264,8 @@
         }
       },
       {
-        "title": "What is GDG?",
-        "description": "Google Developers Group (GDG) - is open and volunteer geek community who create exciting projects and share experience about Google technologies with a passion",
+        "title": "Therapieen",
+        "description": "Deep tissue soundmassage: ik plaats de klankschalen een voor een op en om het lichaam om de trillingen diep te laten doordringen. Duur: 60 minuten. Chakra soundbath: Na een meditatie om het lichaam te ontspannen en de zintuigen te stimuleren speel ik de klankschalen in combinatie met andere instrumenten. Elke klankschaal staat in connectie met een chakra deze stimulans zorgt ervoor dat de energie weer kan gaan stromen. Duur: 45 minuten. Aura cleansing: na een meditatie waarbij we ons focussen op het versterken en beschermen van onze onzichtbare ‘ beschermlaag’ zal ik met behulp van de tingsha en klankschalen je aura schoonmaken. Duur: 35 minuten",
         "callToAction": {
           "label": "Read more",
           "link": "https://developers.google.com/groups/",
