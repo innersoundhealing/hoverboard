@@ -50,7 +50,8 @@
       "description": "Inner soundhealing",
       "background": {
         "color": "#673ab7",
-        "image": "/images/backgrounds/home.jpg"
+        "image": "/images/backgrounds/home.jpg",
+        "video": "/images/backgrounds/background.mp4"
       },
       "fontColor": "#FFF"
     },

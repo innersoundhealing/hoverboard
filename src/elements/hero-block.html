@@ -77,14 +77,16 @@
       style$="color: [[fontColor]]"
       layout start vertical center-justified
     >
-      <plastic-image
-        class="hero-image"
-        srcset="[[backgroundImage]]"
-        style$="background-color: [[backgroundColor]]"
-        sizing="cover"
-        lazy-load preload fade fit
-      ></plastic-image>
-      <div class="hero-overlay" show$="[[_showOverlay(backgroundImage)]]" fit></div>
+      <video autoplay loop>
+        <source src="[[backgroundVideo]]" type="video/mp4">
+        <plastic-image preload fade lazy-load class="hero-image"
+                       srcset="[[backgroundImage]]"
+                       style$="background-color: [[backgroundColor]]"
+                       sizing="cover"
+                       lazy-load preload fade fit
+        ></plastic-image>      </video>
+
+      <div class="hero-overlay" show$="[[_showOverlay(backgroundVideo)]]" fit></div>
       <div class="container">
         <div class="hero-content">
           <slot></slot>
@@ -106,6 +108,7 @@
         return {
           active: Boolean,
           backgroundImage: String,
+          backgroundVideo: String,
           backgroundColor: String,
           fontColor: String,
           hideLogo: Boolean,
@@ -114,7 +117,7 @@
 
       static get observers() {
         return [
-          '_setState(active, backgroundImage, backgroundColor, fontColor, hideLogo)',
+          '_setState(active, backgroundImage, backgroundVideo, backgroundColor, fontColor, hideLogo)',
         ];
       }
 
@@ -122,10 +125,11 @@
         return !!backgroundImage;
       }
 
-      _setState(active, backgroundImage, backgroundColor, fontColor, hideLogo) {
+      _setState(active, backgroundImage, backgroundVideo, backgroundColor, fontColor, hideLogo) {
         if (active) {
           uiActions.setHeroSettings({
             backgroundImage,
+            backgroundVideo,
             backgroundColor,
             fontColor,
             hideLogo,
