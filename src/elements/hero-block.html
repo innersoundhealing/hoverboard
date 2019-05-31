@@ -35,6 +35,16 @@
         position: absolute;
       }
 
+      .hero-video {
+        /*transition: background-color 0.3s;*/
+        position: absolute;
+        background-color: #000;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        width: 100%;
+      }
+
       .container {
         padding: 0;
         width: 100%;
@@ -77,7 +87,7 @@
       style$="color: [[fontColor]]"
       layout start vertical center-justified
     >
-      <video autoplay loop>
+      <video autoplay muted loop class="hero-video">
         <source src="[[backgroundVideo]]" type="video/mp4">
         <plastic-image preload fade lazy-load class="hero-image"
                        srcset="[[backgroundImage]]"
