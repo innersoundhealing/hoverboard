@@ -113,14 +113,14 @@
     }
   },
   "location": {
-    "label": "Location",
+    "label": "Locatie",
     "name": "Planeta kino",
-    "city": "Lviv",
-    "short": "Lviv, Ukraine",
-    "address": "36 Shchyretska St, Lviv, Ukraine",
+    "city": "Den Haag",
+    "short": "Den Haag, Nederland",
+    "address": "Ribesstraat 150, Den Haag, Nederland",
     "pointer": {
-      "latitude": 49.809841,
-      "longitude": 23.972805,
+      "latitude": 52.0724814,
+      "longitude": 4.2612532,
       "zoom": 5
     },
     "mapCenter": {
