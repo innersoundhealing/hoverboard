@@ -64,17 +64,9 @@
       "fontColor": "#424242"
     },
     "speakers": {
-      "title": "Speakers",
-      "metaDescription": "Hear from the Googlers, Partners, and Guest Speakers who are building the future of cloud. Check back often as we add more speakers, including our customers and partners.",
-      "description": "Hear from the Googlers, Partners, and Guest Speakers who are building the future of cloud. Check back often as we add more speakers, including our customers and partners.",
-      "background": {
-        "color": "#FFF"
-      },
-      "fontColor": "#424242"
-    },
-    "previousSpeakers": {
-      "title": "Previous Speakers",
-      "metaDescription": "Check who was with us last years",
+      "title": "Reviews",
+      "metaDescription": "Lees wat meer over wat de mensen over mij die al een keer een klankschalensessie hebben ervaren of waar ik een workshop heb gegeven wat zij ervan vonden.",
+      "description": "Lees wat meer over wat de mensen over mij die al een keer een klankschalensessie hebben ervaren of waar ik een workshop heb gegeven wat zij ervan vonden.",
       "background": {
         "color": "#FFF"
       },
