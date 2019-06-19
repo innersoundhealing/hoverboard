@@ -6,9 +6,9 @@
   "dates": "October 12-13, 2018",
   "partnershipProposition": "https://bit.ly/dfua17-partners",
   "share": "Share",
-  "followOur": "Follow our",
-  "followUs": "Follow us",
-  "emailUs": "Email us",
+  "followOur": "Volg mijn",
+  "followUs": "Volg mij",
+  "emailUs": "Email mij",
   "partnershipResources": "Partnership Resources",
   "eventResources": "Event Resources",
   "buyTicket": "maak een afspraak",
@@ -127,22 +127,22 @@
         "number": "90"
       },
       "days": {
-        "label": "Aantal jaren dat klankschalen worden gebruikt",
-        "number": "40.000"
+        "label": "Tonen en hun matchende chakra's",
+        "number": "710"
       },
       "sessions": {
-        "label": "Aantal voordelen klankschalentherapie",
+        "label": "Voordelen van klankschalentherapie",
         "number": "20"
       },
       "tracks": {
-        "label": "Chakra's",
-        "number": "7"
+        "label": "Aantal jaren dat klankschalen bestaan",
+        "number": "40.000"
       }
     }
   },
   "ticketsBlock": {
     "title": "Evenementen",
-    "ticketsDetails": "Neem contact op als je deel wilt nemen aan een evenement",
+    "ticketsDetails": "Neem contact op als je een afspraak wilt maken",
     "soldOut": "Chakra soundbath",
     "notAvailableYet": "Deep tissue sound masssage",
     "save": "Aura cleansing"
@@ -159,9 +159,9 @@
     "toast": "We will contact you soon!"
   },
   "featuredVideos": {
-    "title": "Video's met meditatieve muziek en klankschalen",
+    "title": "Video's met meditatieve muziek en soundhealing",
     "callToAction": {
-      "label": "Bekijk video's",
+      "label": "Bekijk  alle video's",
       "link": "https://www.youtube.com/channel/UCUG-u74jwyl0Ze3EzRfC-0Q/videos"
     }
   },
@@ -196,10 +196,10 @@
     }
   },
   "galleryBlock": {
-    "title": "#dfua16 highlights",
-    "description": "This year's festival built lots of excitement. Check out photos from featured talks, hands-on learning sessions, and after-hours fun.",
+    "title": "Singing bowls",
+    "description": "Kom jij een keer de kracht van klankschalen ervaren?",
     "callToAction": {
-      "label": "See all photos",
+      "label": "klik voor meer foto's",
       "link": "https://goo.gl/photos/H8s3CtPexCzkLqSt9"
     }
   },
@@ -257,17 +257,17 @@
     "blocks": [
       {
         "title": "Wie ben ik",
-        "description": "<a href='http://lviv.gdg.org.ua' target='_blank'>GDG Lviv</a> with support of 10 GDGs from all around Ukraine is proud organizer of DevFest Ukraine",
+        "description": "Lees hier over hoe ik in Nepal geinspireerd ben geraakt door de klankschalen en waar mijn liefde voor geluid en heling vandaan komt.",
         "callToAction": {
-          "label": "Open team page",
+          "label": "Kom meer over mij te weten",
           "link": "/team"
         }
       },
       {
         "title": "Therapieen",
-        "description": "Deep tissue soundmassage: ik plaats de klankschalen een voor een op en om het lichaam om de trillingen diep te laten doordringen. Duur: 60 minuten. Chakra soundbath: Na een meditatie om het lichaam te ontspannen en de zintuigen te stimuleren speel ik de klankschalen in combinatie met andere instrumenten. Elke klankschaal staat in connectie met een chakra deze stimulans zorgt ervoor dat de energie weer kan gaan stromen. Duur: 45 minuten. Aura cleansing: na een meditatie waarbij we ons focussen op het versterken en beschermen van onze onzichtbare ‘ beschermlaag’ zal ik met behulp van de tingsha en klankschalen je aura schoonmaken. Duur: 35 minuten",
+        "description": "Ik bied chakra soundhealing, deep tissue soundmassage en aura cleansing aan. Klik hieronder om meer over deze therapie vormen te lezen.",
         "callToAction": {
-          "label": "Read more",
+          "label": "Lees meer over de therapievormen",
           "link": "https://developers.google.com/groups/",
           "newTab": true
         }
