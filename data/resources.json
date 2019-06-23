@@ -177,11 +177,7 @@
     "previousYear": "Year"
   },
   "speakersBlock": {
-    "title": "Ervaringen",
-    "callToAction": {
-      "label": "View all speakers",
-      "link": "/speakers/"
-    }
+    "title": "Ervaringen"
   },
   "previousSpeakersBlock": {
     "title": "Previous speakers",
