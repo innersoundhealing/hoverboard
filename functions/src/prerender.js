@@ -16,7 +16,7 @@ const generateUrl = (request) => {
   // cloudfunctions.net)
   return url.format({
     protocol: request.protocol,
-    host: functions.config().site.domain,
+    host: functions.region('europe-west1').config().site.domain,
     pathname: request.originalUrl,
   });
 };

@@ -1,4 +1,4 @@
-import { storage } from 'firebase-functions';
+import * as functions from 'firebase-functions';
 import Storage from '@google-cloud/storage';
 import { spawn } from 'child-process-promise';
 import mkdirp from 'mkdirp-promise';
@@ -8,7 +8,7 @@ import fs from 'fs';
 
 const gcs = new Storage();
 
-const optimizeImages = storage.object().onFinalize((object) => {
+const optimizeImages = functions.region('europe-west1').storage.object().onFinalize((object) => {
   const { contentType } = object;
   // Exit if this is triggered on a file that is not an image.
   if (!contentType.startsWith('image/')) {

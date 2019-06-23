@@ -2,7 +2,7 @@ import * as functions from 'firebase-functions';
 import md5 from 'md5';
 import fetch from 'node-fetch';
 
-const mailchimpSubscribe = functions.firestore.document('/subscribers/{id}')
+const mailchimpSubscribe = functions.region('europe-west1').firestore.document('/subscribers/{id}')
   .onCreate((snapshot) => {
 
     const mailchimpConfig = functions.config().mailchimp;

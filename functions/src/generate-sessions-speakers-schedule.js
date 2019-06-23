@@ -3,12 +3,12 @@ import { firestore } from 'firebase-admin';
 import mapSessionsSpeakersSchedule from './schedule-generator/speakers-sessions-schedule-map';
 import mapSessionsSpeakers from './schedule-generator/speakers-sessions-map';
 
-export const sessionsWrite = functions.firestore.document('sessions/{sessionId}').onWrite(async () => {
+export const sessionsWrite = functions.region('europe-west1').firestore.document('sessions/{sessionId}').onWrite(async () => {
   return generateAndSaveData();
 });
 
-export const scheduleWrite = functions.firestore.document('schedule/{scheduleId}').onWrite(async () => {
-  const scheduleConfig = functions.config().schedule;
+export const scheduleWrite = functions.region('europe-west1').firestore.document('schedule/{scheduleId}').onWrite(async () => {
+  const scheduleConfig = functions.region('europe-west1').config().schedule;
   if (!scheduleConfig || typeof scheduleConfig.enabled === 'undefined') {
     console.error('Schedule config is NOT set! Run `firebase functions:config:set schedule.enabled=true`, redeploy functions and try again.');
     return null;
@@ -19,7 +19,7 @@ export const scheduleWrite = functions.firestore.document('schedule/{scheduleId}
   return null;
 });
 
-export const speakersWrite = functions.firestore.document('speakers/{speakerId}').onWrite(async (change, context) => {
+export const speakersWrite = functions.region('europe-west1').firestore.document('speakers/{speakerId}').onWrite(async (change, context) => {
   const changedSpeaker = change.after.exists ? { id: context.params.speakerId, ...change.after.data() } : null;
   return generateAndSaveData(changedSpeaker);
 });
@@ -48,7 +48,7 @@ async function generateAndSaveData(changedSpeaker) {
   });
 
   let generatedData = {};
-  const scheduleConfig = functions.config().schedule;
+  const scheduleConfig = functions.region('europe-west1').config().schedule;
   if (!scheduleConfig || typeof scheduleConfig.enabled === 'undefined') {
     console.error('Schedule config is NOT set! Run `firebase functions:config:set schedule.enabled=true`, redeploy functions and try again.');
     return null;
