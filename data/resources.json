@@ -188,12 +188,8 @@
   },
   "galleryBlock": {
     "title": "Singing bowls",
-    "description": "Kom jij een keer de kracht van klankschalen ervaren?",
-    "callToAction": {
-      "label": "klik voor meer foto's",
-      "link": "https://goo.gl/photos/H8s3CtPexCzkLqSt9"
-    }
-  },
+    "description": "Kom jij een keer de kracht van klankschalen ervaren?"
+    },
   "mapBlock": {
     "title": "Location"
   },
