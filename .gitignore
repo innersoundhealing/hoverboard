@@ -1,5 +1,6 @@
 bower_components/
-config/
+config/development.json
+config/production.json
 dist/
 node_modules/
 build/
