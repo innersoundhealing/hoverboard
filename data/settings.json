@@ -9,8 +9,8 @@
   "endDate": "2017-10-14T19:00:00+03:00",
   "webapp": {
     "shortName": "Inner sound",
-    "themeColor": "#673AB7",
-    "backgroundColor": "#673AB7"
+    "themeColor": "#FFCDD2",
+    "backgroundColor": "#FFCDD2"
   },
   "dateFormat": {
     "locale": "en-US"
@@ -49,7 +49,7 @@
     "home": {
       "description": "Inner soundhealing",
       "background": {
-        "color": "#673ab7",
+        "color": "#FFCDD2",
         "image": "/images/backgrounds/waterklankschaal.jpg",
         "video": "/images/backgrounds/background.mp4"
       },
