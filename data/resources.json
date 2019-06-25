@@ -165,9 +165,9 @@
     "suggested": "Up next"
   },
   "latestPostsBlock": {
-    "title": "The latest news",
+    "title": "Inner sound blog",
     "callToAction": {
-      "label": "View all stories",
+      "label": "Lees alle blogposts",
       "link": "/blog/"
     }
   },
