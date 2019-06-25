@@ -118,19 +118,19 @@
   },
     "statisticsBlock": {
       "attendees": {
-        "label": "Aantal jaren dat klankschalen worden gebruikt in het westen",
+        "label": "Zoveel jaar worden klankschalen gebruikt in het westen",
         "number": "90"
       },
       "days": {
         "label": "Tonen en hun matchende chakra's",
-        "number": "710"
+        "number": "7"
       },
       "sessions": {
         "label": "Voordelen van klankschalentherapie",
         "number": "20"
       },
       "tracks": {
-        "label": "Aantal jaren dat klankschalen bestaan",
+        "label": "Zoveel jaar bestaan klankschalen al",
         "number": "40.000"
       }
     }
