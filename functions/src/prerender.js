@@ -50,7 +50,7 @@ app.get('*', (req, res) => {
 
     // Did you read the README? You should have set functions.config().rendertron.server
     // to where ever you deployed https://github.com/GoogleChrome/rendertron on AppEngine
-    fetch(`${functions.config().rendertron.server}/render/${targetUrl}`)
+    fetch(`${functions.region('europe-west1').config().rendertron.server}/render/${targetUrl}`)
       .then((res) => res.text())
       .then((body) => {
         // We set Vary because we only want to cache this result for the bots
