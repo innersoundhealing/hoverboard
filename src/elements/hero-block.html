@@ -87,14 +87,14 @@
       style$="color: [[fontColor]]"
       layout start vertical center-justified
     >
-      <!-- <video autoplay muted loop class="hero-video"> -->
-        <!-- <source src="[[backgroundVideo]]" type="video/mp4"> -->
+       <video autoplay loop class="hero-video">
+         <source src="[[backgroundVideo]]" type="video/mp4">
         <plastic-image class="hero-image"
                        srcset="[[backgroundImage]]"
                        style$="background-color: [[backgroundColor]]"
                        sizing="cover"
                        lazy-load preload fade fit></plastic-image>
-      <!-- </video>  -->
+       </video>
 
       <div class="hero-overlay" show$="[[_showOverlay(backgroundVideo)]]" fit></div>
       <div class="container">
