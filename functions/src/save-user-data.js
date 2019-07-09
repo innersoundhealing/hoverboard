@@ -1,7 +1,7 @@
 import * as functions from 'firebase-functions';
 import { firestore } from 'firebase-admin';
 
-const saveUserData = functions.region('europe-west1').auth.user().onCreate((userRecord) => {
+const saveUserData = functions.region('europe-west4').auth.user().onCreate((userRecord) => {
   const uid = userRecord.uid || userRecord.providerData[0].uid;
   const userData = {
     email: userRecord.email || userRecord.providerData[0].email || '',

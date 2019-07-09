@@ -8,7 +8,7 @@ import fs from 'fs';
 
 const gcs = new Storage();
 
-const optimizeImages = functions.region('europe-west1').storage.object().onFinalize((object) => {
+const optimizeImages = functions.region('europe-west4').storage.object().onFinalize((object) => {
   const { contentType } = object;
   // Exit if this is triggered on a file that is not an image.
   if (!contentType.startsWith('image/')) {

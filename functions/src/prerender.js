@@ -16,7 +16,7 @@ const generateUrl = (request) => {
   // cloudfunctions.net)
   return url.format({
     protocol: request.protocol,
-    host: functions.region('europe-west1').config().site.domain,
+    host: functions.region('europe-west4').config().site.domain,
     pathname: request.originalUrl,
   });
 };
@@ -50,7 +50,7 @@ app.get('*', (req, res) => {
 
     // Did you read the README? You should have set functions.config().rendertron.server
     // to where ever you deployed https://github.com/GoogleChrome/rendertron on AppEngine
-    fetch(`${functions.region('europe-west1').config().rendertron.server}/render/${targetUrl}`)
+    fetch(`${functions.region('europe-west4').config().rendertron.server}/render/${targetUrl}`)
       .then((res) => res.text())
       .then((body) => {
         // We set Vary because we only want to cache this result for the bots
@@ -75,6 +75,6 @@ app.get('*', (req, res) => {
   }
 });
 
-const prerender = functions.https.onRequest(app);
+const prerender = functions.region('europe-west4').https.onRequest(app);
 
 export default prerender;

@@ -1,7 +1,7 @@
 import * as functions from 'firebase-functions';
 import { firestore, messaging } from 'firebase-admin';
 
-const sendGeneralNotification = functions.region('europe-west1').firestore.document('/notifications/{timestamp}')
+const sendGeneralNotification = functions.region('europe-west4').firestore.document('/notifications/{timestamp}')
   .onCreate(async (snapshot, context) => {
     const timestamp = context.params.timestamp;
     const message = snapshot.data();
