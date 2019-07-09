@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars,no-undef */
+// eslint-disable-next-line no-redeclare
 const uiActions = {
   toggleDrawer: (value = null) => {
     store.dispatch({
@@ -32,6 +33,7 @@ const uiActions = {
   },
 };
 
+// eslint-disable-next-line no-redeclare
 const routingActions = {
   setRoute: (routeFromAction) => {
     const route = routeFromAction || 'home';
@@ -52,6 +54,7 @@ const routingActions = {
   },
 };
 
+// eslint-disable-next-line no-redeclare
 const dialogsActions = {
   openDialog: (dialogName, data) => {
     store.dispatch({
@@ -77,6 +80,7 @@ const dialogsActions = {
 };
 
 let toastHideTimeOut;
+// eslint-disable-next-line no-redeclare
 const toastActions = {
   showToast: (toast) => {
     const duration = typeof toast.duration !== 'undefined' ? toast.duration : 5000;
@@ -103,6 +107,7 @@ const toastActions = {
   },
 };
 
+// eslint-disable-next-line no-redeclare
 const ticketsActions = {
   fetchTickets: () => (dispatch) => {
     dispatch({
@@ -137,6 +142,7 @@ const _getPartnerItems = (groupId) => firebase.firestore()
         .map((snap) => Object.assign({}, snap.data(), { id: snap.id }))
     );
 
+// eslint-disable-next-line no-redeclare
 const partnersActions = {
   addPartner: (data) => (dispatch) => {
     dispatch({
@@ -203,6 +209,7 @@ const partnersActions = {
   },
 };
 
+// eslint-disable-next-line no-redeclare
 const videosActions = {
   fetchVideos: () => (dispatch) => {
     dispatch({
@@ -230,6 +237,7 @@ const videosActions = {
   },
 };
 
+// eslint-disable-next-line no-redeclare
 const blogActions = {
   fetchList: () => (dispatch) => {
     dispatch({
@@ -266,6 +274,7 @@ const blogActions = {
   },
 };
 
+// eslint-disable-next-line no-redeclare
 const speakersActions = {
   fetchList: () => (dispatch) => {
     dispatch({
@@ -303,6 +312,7 @@ const speakersActions = {
   },
 };
 
+// eslint-disable-next-line no-redeclare
 const previousSpeakersActions = {
   fetchList: () => (dispatch) => {
     dispatch({
@@ -339,6 +349,7 @@ const previousSpeakersActions = {
   },
 };
 
+// eslint-disable-next-line no-redeclare
 const sessionsActions = {
   fetchList: () => (dispatch) => {
     dispatch({
@@ -446,6 +457,7 @@ const sessionsActions = {
   },
 };
 
+// eslint-disable-next-line no-redeclare
 const scheduleActions = {
   fetchSchedule: () => (dispatch) => {
     dispatch({
@@ -471,6 +483,7 @@ const scheduleActions = {
   },
 };
 
+// eslint-disable-next-line no-redeclare
 const galleryActions = {
   fetchGallery: () => (dispatch) => {
     dispatch({
@@ -504,6 +517,7 @@ const _getTeamMembers = (teamId) => firebase.firestore()
         .map((snap) => Object.assign({}, snap.data(), { id: snap.id }))
     );
 
+// eslint-disable-next-line no-redeclare
 const teamActions = {
   fetchTeam: () => (dispatch) => {
     dispatch({
@@ -540,6 +554,7 @@ const teamActions = {
   },
 };
 
+// eslint-disable-next-line no-redeclare
 const userActions = {
   signIn: (providerName) => {
     const firebaseProvider = helperActions.getFederatedProvider(providerName);
@@ -596,6 +611,7 @@ const userActions = {
   },
 };
 
+// eslint-disable-next-line no-redeclare
 const subscribeActions = {
   subscribe: (data) => (dispatch) => {
     const id = data.email.replace(/[^\w\s]/gi, '');
@@ -642,6 +658,7 @@ const subscribeActions = {
 };
 
 let messaging;
+// eslint-disable-next-line no-redeclare
 const notificationsActions = {
   initializeMessaging: () => {
     return new Promise((resolve) => {
@@ -770,6 +787,7 @@ const notificationsActions = {
   },
 };
 
+// eslint-disable-next-line no-redeclare
 const helperActions = {
   storeUser: (user) => {
     let userToStore = { signedIn: false };

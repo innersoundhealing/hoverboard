@@ -12,6 +12,7 @@ const OPEN_DIALOG = 'app/Dialogs/OPEN_DIALOG';
 const CLOSE_DIALOG = 'app/Dialogs/CLOSE_DIALOG';
 const SET_DIALOG_DATA = 'app/Dialogs/SET_DIALOG_DATA';
 const SET_DIALOG_ERROR = 'app/Dialogs/SET_DIALOG_ERROR';
+// eslint-disable-next-line no-redeclare
 const DIALOGS = {
   SPEAKER: 'speaker',
   PREVIOUS_SPEAKER: 'previousSpeaker',
@@ -97,6 +98,7 @@ const SUBSCRIBE = 'app/Subscribe/SUBSCRIBE';
 
 // notifications
 const UPDATE_NOTIFICATIONS_STATUS = 'app/Notifications/UPDATE_NOTIFICATIONS_STATUS';
+// eslint-disable-next-line no-redeclare
 const NOTIFICATIONS_STATUS = {
   GRANTED: 'granted',
   DENIED: 'denied',

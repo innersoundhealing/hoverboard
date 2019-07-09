@@ -197,7 +197,7 @@
       _showAddSession(timeslot, onlyFeatured) {
         return onlyFeatured && !timeslot.sessions.reduce((aggregator, sessionBlock) =>
           aggregator + sessionBlock.items.length
-            , 0);
+        , 0);
       }
 
       _isNotEmpty(sessionBlock) {

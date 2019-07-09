@@ -5,7 +5,7 @@ import fetch from 'node-fetch';
 const mailchimpSubscribe = functions.region('europe-west1').firestore.document('/subscribers/{id}')
   .onCreate((snapshot) => {
 
-    const mailchimpConfig = functions.config().mailchimp;
+    const mailchimpConfig = functions.region('europe-west1').config().mailchimp;
     if (!mailchimpConfig) {
       console.log('Can\'t subscribe user, Mailchimp config is empty.');
     }
