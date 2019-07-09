@@ -67,7 +67,7 @@ const sendPushNotificationToUsers = async (userIds, payload) => {
   return removeUserTokens(tokensToRemove);
 };
 
-const scheduleNotifications = functions.region('europe-west4').pubsub.topic('schedule-tick').onPublish(async () => {
+const scheduleNotifications = functions.region('europe-west1').pubsub.topic('schedule-tick').onPublish(async () => {
     const notificationsConfigPromise = firestore().collection('config').doc('notifications').get();
     const schedulePromise = firestore().collection('schedule').get();
 
