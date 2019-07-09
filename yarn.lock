@@ -4930,7 +4930,7 @@ firebase-admin@^8.2.0:
     "@google-cloud/firestore" "^2.0.0"
     "@google-cloud/storage" "^2.5.0"
 
-firebase-functions@^3.0.2:
+firebase-functions@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/firebase-functions/-/firebase-functions-3.1.0.tgz#0b5fb120967d3baaafd17fd86518bab5d93f1750"
   integrity sha512-cv2waFVZiiwPSa1lnuBpRZT1kBRJmGqFDOIbvd8GHGHYEwGUFNrHq3naqYtydWa6f6re57LKLzVa+o9Muf7ysA==
