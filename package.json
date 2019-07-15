@@ -22,13 +22,13 @@
   "dependencies": {
     "autotrack": "^2.4.1",
     "firebase-functions": "^3.1.0",
-    "redux": "^4.0.1",
+    "redux": "^4.0.4",
     "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.5.0",
+    "@babel/core": "^7.5.4",
     "@babel/node": "^7.5.0",
-    "@babel/preset-env": "^7.5.0",
+    "@babel/preset-env": "^7.5.4",
     "bower": "^1.8.8",
     "browser-sync": "^2.26.7",
     "connect-history-api-fallback": "^1.6.0",
@@ -41,7 +41,7 @@
     "eslint-plugin-html": "^6.0.0",
     "eslint-plugin-polymer": "^0.4.0",
     "firebase-admin": "^8.2.0",
-    "firebase-tools": "^7.0.2",
+    "firebase-tools": "^7.1.0",
     "gulp": "^4.0.2",
     "gulp-cli": "^2.2.0",
     "gulp-eslint": "^6.0.0",
