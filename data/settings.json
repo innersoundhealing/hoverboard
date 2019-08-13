@@ -30,11 +30,6 @@
       "label": "Reviews"
     },
     {
-      "route": "agenda",
-      "permalink": "/agenda/",
-      "label": "Agenda"
-    },
-    {
       "route": "about",
       "permalink": "/about/",
       "label": "Over mij"
@@ -60,23 +55,6 @@
       "metaDescription": "Read stories from our team",
       "background": {
         "color": "#FFF"
-      },
-      "fontColor": "#424242"
-    },
-    "speakers": {
-      "title": "Reviews",
-      "metaDescription": "Lees wat meer over wat de mensen over mij die al een keer een klankschalensessie hebben ervaren of waar ik een workshop heb gegeven wat zij ervan vonden.",
-      "description": "Lees wat meer over wat de mensen over mij die al een keer een klankschalensessie hebben ervaren of waar ik een workshop heb gegeven wat zij ervan vonden.",
-      "background": {
-        "color": "#FFF"
-      },
-      "fontColor": "#424242"
-    },
-    "schedule": {
-      "title": "Schedule",
-      "metaDescription": "Choose your sessions to visit",
-      "background": {
-        "color": "#fff"
       },
       "fontColor": "#424242"
     },
