@@ -35,8 +35,8 @@
       "label": "Agenda"
     },
     {
-      "route": "aboutme",
-      "permalink": "/about-me/",
+      "route": "about",
+      "permalink": "/about/",
       "label": "Over mij"
     },
     {
@@ -80,13 +80,16 @@
       },
       "fontColor": "#424242"
     },
-    "team": {
-      "title": "Team",
-      "metaDescription": "Get more info about organizers",
+    "about": {
+      "title": "Over mij",
+      "metaDescription": "Get more info over me",
+      "quote": "*\"Ik verkoop geen bier, ik verkoop gezelligheid.\"*<br>- Freddy Heineken",
+      "description": "Welkom op mijn website, leuk dat je komt kijken! Ik wil u graag wat meer vertellen over waar en wanneer mijn liefde voor klankschalen is begonnen. Het begon in het prachtige land Nepal, waar ik in November 2018 alleen heen ben gereisd. Naast dat het land en de cultuur mij inspireerde om meer te leren over deze eeuwenoude therapievorm, kwam ik op een heel toevallige manier in contact met mijn leraar: Anup Panthi. Ik ontmoette een andere reizigster die een leerling was bij hem, en introduceerde ons. Ik besloot ook les te nemen, iets in mij vertelde mij dat ik deze kans niet moest laten schieten. Vanaf het eerste woord dat uit Anup zijn mond kwam, was ik overdonderd door de kracht en geschiedenis van klankschalen. Ik leerde niet alleen om ze te bespelen, maar ook de reden waarom onze lichamen zo sterk reageren op de trillingen. Ik begon in Nepal al op andere reizigers te oefenen, en merkte dat ik hier onwijs veel energie van kreeg, ik vond het zo leuk! Ik kon niet wachten om terug in Nederland iedereen erover te vertellen en zo kregen klankschalen een hele grote invloed in mijn leven. Nu ben ik hier om mijn missie uit te voeren: de mensen in Nederland helpen om ontspannen door het leven te gaan en om te luisteren naar hun innerlijke stem, een stem die je meer probeert te vertellen dan je soms horen kan!",
       "background": {
+        "image": "https://lh3.googleusercontent.com/mh1piHYj4fP8ZAlnz-Kb1C17RSxQOUiDNNUxKiMU6qg2KQIv_hnP6SeKewbq7hZd7K4uXxfUigDg3dgEs9XC6wqJwHlaiySZ5WHAQA2KyikIaVtJ-RCQHLT8pssbJkws4jHA54j25BH10g6DMaAeScyFqEITmQCYhAEUTHv7gbQCjD7EdvV7pgmyOOwq5yktkHYo3Z7GIpnvwVm8Bo2qTqqw3512mRu5S0x8vdBNvu-jZElZzrJnmL0hCoq54Gq1i5B2Lyd9FsACLwUtN6v1IU-hQELyWVynWdMh1RGZXvX4tqid-JkLBP-_WaQMbPb1Y1ogh5oL1IJGH0QTEcQ4ESGAJTrGD-Tp85rneMPVdMwyjycE8sM7tuBUFuV9f-aZLt2vLNNSR_Dg68RO5SMDWKc26ApYbYuU_pRAszAhFLYPR6Dr1YxRH3Y5tOwqer8Vb7sEj-pEIUcwZhZn046RoDHPMl4hnl-zF10de5MvPODa2kfKizk93PeoCFSAULKtn3G666zPDhRXzIzffTswocgQmegFGGSKLZL2mEgRQAmfwdQ3lPDHOlOV0HBA8CrQEOnAM83mYZD1nTM4cCuO6fd5lx4rzWXktW3e2-_KVgcKLY1pBx3DM_iKvZCIAsCTgSewpxiDq06KehNnx000fTho5CKFIxKi=w1595-h936-no",
         "color": "#fff"
       },
-      "fontColor": "#424242"
+      "fontColor": "#fff"
     },
     "faq": {
       "title": "FAQs",
