@@ -1,22 +1,23 @@
-import * as functions from "firebase-functions";
-import { firestore } from "firebase-admin";
+import * as functions from 'firebase-functions'
+import { firestore } from 'firebase-admin'
 
 const saveUserData = functions
-  .region("europe-west1")
+  .region('europe-west1')
   .auth.user()
   .onCreate(userRecord => {
-    const uid = userRecord.uid || userRecord.providerData[0].uid;
+    const uid = userRecord.uid || userRecord.providerData[0].uid
     const userData = {
-      email: userRecord.email || userRecord.providerData[0].email || "",
+      email: userRecord.email || userRecord.providerData[0].email || '',
       displayName:
-        userRecord.displayName || userRecord.providerData[0].displayName || "",
-      photoURL: userRecord.photoURL || userRecord.providerData[0].photoURL || ""
-    };
+        userRecord.displayName || userRecord.providerData[0].displayName || '',
+      photoURL:
+        userRecord.photoURL || userRecord.providerData[0].photoURL || '',
+    }
 
     return firestore()
-      .collection("users")
+      .collection('users')
       .doc(uid)
-      .set(userData);
-  });
+      .set(userData)
+  })
 
-export default saveUserData;
+export default saveUserData

@@ -1,44 +1,44 @@
 function sessionsSpeakersScheduleMap(sessionsRaw, speakersRaw, scheduleRaw) {
-  let schedule = {};
-  let sessions = {};
-  let speakers = {};
-  let scheduleTags = [];
+  let schedule = {}
+  let sessions = {}
+  let speakers = {}
+  let scheduleTags = []
 
   for (const dayKey of Object.keys(scheduleRaw)) {
-    const day = scheduleRaw[dayKey];
-    const tracksNumber = day.tracks.length;
-    let dayTags = [];
-    let timeslots = [];
-    let extensions = {};
+    const day = scheduleRaw[dayKey]
+    const tracksNumber = day.tracks.length
+    let dayTags = []
+    let timeslots = []
+    let extensions = {}
 
-    const timeslotLen = day.timeslots.length;
+    const timeslotLen = day.timeslots.length
     for (
       let timeslotsIndex = 0;
       timeslotsIndex < timeslotLen;
       timeslotsIndex++
     ) {
-      const timeslot = day.timeslots[timeslotsIndex];
-      let innerSessions = [];
+      const timeslot = day.timeslots[timeslotsIndex]
+      let innerSessions = []
 
-      const sessionsLen = timeslot.sessions.length;
+      const sessionsLen = timeslot.sessions.length
       for (let sessionIndex = 0; sessionIndex < sessionsLen; sessionIndex++) {
-        let subSessions = [];
+        let subSessions = []
 
-        const subSessionsLen = timeslot.sessions[sessionIndex].items.length;
+        const subSessionsLen = timeslot.sessions[sessionIndex].items.length
         for (
           let subSessionIndex = 0;
           subSessionIndex < subSessionsLen;
           subSessionIndex++
         ) {
           const sessionId =
-            timeslot.sessions[sessionIndex].items[subSessionIndex];
-          const subsession = sessionsRaw[sessionId];
-          const mainTag = subsession.tags ? subsession.tags[0] : "General";
+            timeslot.sessions[sessionIndex].items[subSessionIndex]
+          const subsession = sessionsRaw[sessionId]
+          const mainTag = subsession.tags ? subsession.tags[0] : 'General'
           const endTimeRaw = timeslot.sessions[sessionIndex].extend
             ? day.timeslots[
                 timeslotsIndex + timeslot.sessions[sessionIndex].extend - 1
               ].endTime
-            : timeslot.endTime;
+            : timeslot.endTime
           const endTime =
             subSessionsLen > 1
               ? getEndTime(
@@ -48,18 +48,18 @@ function sessionsSpeakersScheduleMap(sessionsRaw, speakersRaw, scheduleRaw) {
                   subSessionsLen,
                   subSessionIndex + 1
                 )
-              : endTimeRaw;
+              : endTimeRaw
           const startTime =
             subSessionsLen > 1 && subSessionIndex > 0
               ? sessions[
                   timeslot.sessions[sessionIndex].items[subSessionIndex - 1]
                 ].endTime
-              : timeslot.startTime;
+              : timeslot.startTime
 
           if (subsession.tags) {
-            dayTags = [...new Set([...dayTags, ...subsession.tags])];
+            dayTags = [...new Set([...dayTags, ...subsession.tags])]
           }
-          scheduleTags = addTagTo(scheduleTags || [], mainTag);
+          scheduleTags = addTagTo(scheduleTags || [], mainTag)
 
           const finalSubSession = Object.assign({}, subsession, {
             mainTag,
@@ -74,19 +74,19 @@ function sessionsSpeakersScheduleMap(sessionsRaw, speakersRaw, scheduleRaw) {
               ? subsession.speakers.map(speakerId =>
                   Object.assign(
                     {
-                      id: speakerId
+                      id: speakerId,
                     },
                     speakersRaw[speakerId],
                     {
-                      sessions: null
+                      sessions: null,
                     }
                   )
                 )
-              : []
-          });
+              : [],
+          })
 
-          subSessions.push(finalSubSession);
-          sessions[sessionId] = finalSubSession;
+          subSessions.push(finalSubSession)
+          sessions[sessionId] = finalSubSession
           if (subsession.speakers) {
             speakers = Object.assign(
               {},
@@ -97,11 +97,11 @@ function sessionsSpeakersScheduleMap(sessionsRaw, speakersRaw, scheduleRaw) {
                 finalSubSession,
                 speakers
               )
-            );
+            )
           }
         }
 
-        const start = `${timeslotsIndex + 1} / ${sessionIndex + 1}`;
+        const start = `${timeslotsIndex + 1} / ${sessionIndex + 1}`
         const end = `${timeslotsIndex +
           (timeslot.sessions[sessionIndex].extend || 0) +
           1} / ${
@@ -110,81 +110,81 @@ function sessionsSpeakersScheduleMap(sessionsRaw, speakersRaw, scheduleRaw) {
             : Object.keys(extensions).length
             ? Object.keys(extensions)[0]
             : tracksNumber + 1
-        }`;
+        }`
 
         if (timeslot.sessions[sessionIndex].extend) {
-          extensions[sessionIndex + 1] = timeslot.sessions[sessionIndex].extend;
+          extensions[sessionIndex + 1] = timeslot.sessions[sessionIndex].extend
         }
 
         innerSessions = [
           ...innerSessions,
           {
             gridArea: `${start} / ${end}`,
-            items: subSessions
-          }
-        ];
+            items: subSessions,
+          },
+        ]
       }
 
       for (const [key, value] of Object.entries(extensions)) {
         if (value === 1) {
-          delete extensions[key];
+          delete extensions[key]
         } else {
-          extensions[key] = value - 1;
+          extensions[key] = value - 1
         }
       }
 
       timeslots.push(
         Object.assign({}, timeslot, {
-          sessions: innerSessions
+          sessions: innerSessions,
         })
-      );
+      )
     }
 
     schedule = Object.assign({}, schedule, {
       [dayKey]: Object.assign({}, day, {
         timeslots,
-        tags: dayTags
-      })
-    });
+        tags: dayTags,
+      }),
+    })
   }
 
   return {
     sessions,
     schedule,
-    speakers
-  };
+    speakers,
+  }
 }
 
 function getTimeDifference(date, startTime, endTime) {
-  const timezone = new Date().toString().match(/([A-Z]+[+-][0-9]+.*)/)[1];
-  const timeStart = new Date(date + " " + startTime + " " + timezone).getTime();
-  const timeEnd = new Date(date + " " + endTime + " " + timezone).getTime();
-  return timeEnd - timeStart;
+  const timezone = new Date().toString().match(/([A-Z]+[+-][0-9]+.*)/)[1]
+  const timeStart = new Date(date + ' ' + startTime + ' ' + timezone).getTime()
+  const timeEnd = new Date(date + ' ' + endTime + ' ' + timezone).getTime()
+  return timeEnd - timeStart
 }
 
 function getEndTime(date, startTime, endTime, totalNumber, number) {
-  const timezone = new Date().toString().match(/([A-Z]+[+-][0-9]+.*)/)[1];
-  const timeStart = new Date(`${date} ${startTime} ${timezone}`).getTime();
+  const timezone = new Date().toString().match(/([A-Z]+[+-][0-9]+.*)/)[1]
+  const timeStart = new Date(`${date} ${startTime} ${timezone}`).getTime()
   const difference = Math.floor(
     getTimeDifference(date, startTime, endTime) / totalNumber
-  );
-  const result = new Date(timeStart + difference * number);
-  return result.getHours() + ":" + result.getMinutes();
+  )
+  const result = new Date(timeStart + difference * number)
+  return result.getHours() + ':' + result.getMinutes()
 }
 
 function getDuration(date, startTime, endTime) {
-  let difference = getTimeDifference(date, startTime, endTime);
-  const hh = Math.floor(difference / 1000 / 60 / 60);
-  difference -= hh * 1000 * 60 * 60;
+  let difference = getTimeDifference(date, startTime, endTime)
+  const hh = Math.floor(difference / 1000 / 60 / 60)
+  difference -= hh * 1000 * 60 * 60
   return {
     hh,
-    mm: Math.floor(difference / 1000 / 60)
-  };
+    mm: Math.floor(difference / 1000 / 60),
+  }
 }
 
 function addTagTo(array, element) {
   if (array.indexOf(element) < 0) {
-    return [...array, element];
+    return [...array, element]
   }
 }
 
@@ -194,44 +194,44 @@ function updateSpeakersSessions(
   session,
   generatedSpeakers
 ) {
-  let result = {};
+  let result = {}
   for (let i = 0; i < speakerIds.length; i++) {
-    const speaker = speakersRaw[speakerIds[i]];
-    const generatedSpeaker = generatedSpeakers[speakerIds[i]];
+    const speaker = speakersRaw[speakerIds[i]]
+    const generatedSpeaker = generatedSpeakers[speakerIds[i]]
     const hasSessionsAssigned =
       generatedSpeaker &&
       generatedSpeaker.sessions &&
-      generatedSpeaker.sessions.length;
+      generatedSpeaker.sessions.length
 
     if (speaker) {
       const speakerSessions = hasSessionsAssigned
         ? [...generatedSpeaker.sessions]
-        : [];
+        : []
 
       if (
         !speakerSessions.filter(
           speakerSession => speakerSession.id === session.id
         ).length
       ) {
-        speakerSessions.push(session);
+        speakerSessions.push(session)
       }
 
-      const speakerTags = hasSessionsAssigned ? [...generatedSpeaker.tags] : [];
+      const speakerTags = hasSessionsAssigned ? [...generatedSpeaker.tags] : []
       speakerSessions.forEach(session => {
         if (session.tags)
           session.tags.forEach(tag => {
-            if (!speakerTags.includes(tag)) speakerTags.push(tag);
-          });
-      });
+            if (!speakerTags.includes(tag)) speakerTags.push(tag)
+          })
+      })
 
       result[speakerIds[i]] = Object.assign({}, speaker, {
         id: speakerIds[i],
         sessions: speakerSessions,
-        tags: speakerTags
-      });
+        tags: speakerTags,
+      })
     }
   }
-  return result;
+  return result
 }
 
-export default sessionsSpeakersScheduleMap;
+export default sessionsSpeakersScheduleMap
