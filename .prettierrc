@@ -1,0 +1,4 @@
+"prettier": {
+    // Prettier option here
+    "semi": false
+  }
