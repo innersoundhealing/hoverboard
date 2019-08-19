@@ -44,6 +44,11 @@
         },
         {
           "name": "",
+          "url": "https://devfest.withgoogle.com/",
+          "newTab": true
+        },
+        {
+          "name": "",
           "url": "https://devfest.gdg.org.ua/team/",
           "newTab": true
         }
