@@ -17,7 +17,6 @@
   },
   "hashtag": "Inner sound",
   "disabledSchedule": false,
-  "showSessionShortAbstract": true,
   "navigation": [
     {
       "route": "home",
