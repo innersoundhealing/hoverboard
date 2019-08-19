@@ -177,7 +177,11 @@
     "previousYear": "Year"
   },
   "speakersBlock": {
-    "title": "Ervaringen"
+    "title": "Ervaringen",
+    "callToAction": {
+      "label": "Lees meer klankschalen ervaringen",
+      "link": "/reviews/"
+    }
   },
   "previousSpeakersBlock": {
     "title": "Previous speakers",
