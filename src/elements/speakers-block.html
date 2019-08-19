@@ -235,8 +235,8 @@
       }
 
       _openSpeaker(e) {
-        window.history.pushState({}, null, '/speakers/');
-        window.history.pushState({}, null, `/speakers/${e.model.speaker.id}/`);
+        window.history.pushState({}, null, '/reviews/');
+        window.history.pushState({}, null, `/reviews/${e.model.speaker.id}/`);
         window.dispatchEvent(new CustomEvent('location-changed'));
       }
 
