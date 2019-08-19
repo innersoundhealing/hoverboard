@@ -345,6 +345,17 @@
       } ]
     }
   },
+  "sessions" : {
+    "101" : {
+      "complexity" : "Beginner",
+      "description" : "In this session, we will take a look at Windows and .NET support on Google Cloud Platform. We will build a simple ASP.NET app, deploy to Google Compute Engine and take a look at some of the tools and APIs available to .NET developers on Google Cloud Platform. ",
+      "language" : "English",
+      "presentation" : "https://speakerdeck.com/gdglviv/mete-atamel-windows-and-net-on-google-cloud-platform",
+      "speakers" : [ "mete_atamel", "adrian_kajda" ],
+      "tags" : [ "Cloud" ],
+      "title" : "Windows and .NET on Google Cloud Platform "
+    }
+  },
   "speakers" : {
     "adrian_kajda" : {
       "bio" : "Creator of Fuelio app. Fuelio was his hooby project started in 2012. Three years later the app was aquired by Sygic.",
