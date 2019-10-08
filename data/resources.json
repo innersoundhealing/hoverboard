@@ -20,7 +20,7 @@
   "country": "Country",
   "time": "Time",
   "faq": "/data/faq.md",
-  "cod": "/data/cod.md",
+  "coc": "/data/coc.md",
   "footer": {
     "blog": "Blog"
   },
