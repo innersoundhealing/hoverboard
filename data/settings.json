@@ -17,16 +17,10 @@
   },
   "hashtag": "Inner sound",
   "disabledSchedule": false,
-  "navigation": [
-    {
+  "navigation": [{
       "route": "home",
       "permalink": "/",
       "label": "Home"
-    },
-    {
-      "route": "reviews",
-      "permalink": "/reviews/",
-      "label": "Reviews"
     },
     {
       "route": "about",
@@ -120,8 +114,7 @@
     }
   },
   "socialNetwork": {
-    "follow": [
-      {
+    "follow": [{
         "name": "facebook",
         "url": "https://www.facebook.com/devfest.ukraine/"
       },
@@ -134,8 +127,7 @@
         "url": "https://www.youtube.com/playlist?list=PLt8lEzcLNl31AouwDkbLbLARlQFwNS2en"
       }
     ],
-    "share": [
-      {
+    "share": [{
         "name": "facebook",
         "url": "https://www.facebook.com/sharer.php?u="
       },
@@ -145,10 +137,9 @@
       }
     ]
   },
-  "mailto": "devfest@gdg.org.ua",
+  "mailto": "info@innersoundhealing.nl",
   "signInProviders": {
-    "providersData": [
-      {
+    "providersData": [{
         "name": "google",
         "label": "Sign in with Google",
         "url": "https://accounts.google.com"
