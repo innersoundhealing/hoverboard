@@ -38,7 +38,7 @@
       "description": "Inner soundhealing",
       "background": {
         "color": "#FFCDD2",
-        "image": "/images/backgrounds/waterklankschaal.jpg",
+        "image": "/images/backgrounds/home.jpeg",
         "video": "e7Twr_4t0bA"
       },
       "fontColor": "#FFF"
@@ -116,15 +116,11 @@
   "socialNetwork": {
     "follow": [{
         "name": "facebook",
-        "url": "https://www.facebook.com/devfest.ukraine/"
+        "url": "https://www.facebook.com/Inner-Sound-113273880106308/"
       },
       {
         "name": "instagram",
-        "url": "https://www.instagram.com/devfestukraine"
-      },
-      {
-        "name": "youtube",
-        "url": "https://www.youtube.com/playlist?list=PLt8lEzcLNl31AouwDkbLbLARlQFwNS2en"
+        "url": "https://www.instagram.com/_inner_sound_/"
       }
     ],
     "share": [{
