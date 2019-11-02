@@ -36,7 +36,7 @@
         display: inline-block;
       }
 
-     .social-group.share-block {
+      .social-group.share-block {
         margin-bottom: 17px;
       }
 
@@ -69,19 +69,21 @@
         padding-top: 0;
       }
 
-      .email {
+      .contact {
         margin-bottom: 20px;
-        width: 85px;
+        width: 450px;
       }
 
-      .email .title {
+      .contact .title {
         padding-right: 0;
         padding-top: 17px;
       }
 
-      .email a {
+      .contact a {
         border-bottom: 1px solid var(--footer-text-color);
         padding-bottom: 1px;
+        margin-left: 25px;
+        margin-right: 25px;
       }
 
       .social-networks {
@@ -180,35 +182,39 @@
       </div>
     </div>
 
-    <div class="social-group blog">
-      <div class="title">
-        {$ followOur $}
-        <a href="{$ organizer.blog $}" {% if organizer.blog.startsWith('http') %} target="_blank" rel="noopener noreferrer" {% endif %}>{$ footer.blog $}</a>
-      </div>
-    </div>
+    <!--    <div class="social-group blog">-->
+    <!--      <div class="title">-->
+    <!--        {$ followOur $}-->
+    <!--        <a href="{$ organizer.blog $}" {% if organizer.blog.startsWith('http') %} target="_blank" rel="noopener noreferrer" {% endif %}>{$ footer.blog $}</a>-->
+    <!--      </div>-->
+    <!--    </div>-->
 
     <div class="social-group social-networks">
-      <div class="title">{$ followUs $} </div>
+      <div class="title">{$ followUs $}</div>
       <ul class="nav-inline">
         {% for socFollow in socialNetwork.follow %}
-          <li>
-            <a href="{$ socFollow.url $}"
-                target="_blank"
-                rel="noopener noreferrer"
-                ga-on="click"
-                ga-event-category="social"
-                ga-event-action="follow"
-                ga-event-label="{$ socFollow.name $}">
-              <paper-icon-button icon="hoverboard:{$ socFollow.name $}"></paper-icon-button>
-            </a>
-          </li>
+        <li>
+          <a href="{$ socFollow.url $}"
+             target="_blank"
+             rel="noopener noreferrer"
+             ga-on="click"
+             ga-event-category="social"
+             ga-event-action="follow"
+             ga-event-label="{$ socFollow.name $}">
+            <paper-icon-button icon="hoverboard:{$ socFollow.name $}"></paper-icon-button>
+          </a>
+        </li>
         {% endfor %}
       </ul>
     </div>
 
-    <div class="social-group email">
+    <div class="social-group contact">
       <div class="title">
-        <a aria-label="{$ emailUs $}" href="mailto:{$ mailto $}">{$ emailUs $}</a>
+        <a aria-label="{$ emailUs $}"
+           href="mailto:{$ mailto $}">{$ emailUs $}</a>
+        <a class="telefoon"
+           aria-label="0633719476"
+           href="tel:0633719476">06 - 33 71 94 76</a>
       </div>
     </div>
 
@@ -218,7 +224,9 @@
 
     // eslint-disable-next-line no-undef
     class FooterSocial extends ShareMixin(Polymer.Element) {
-      static get is() {return 'footer-social';}
+      static get is() {
+        return 'footer-social';
+      }
     }
 
     window.customElements.define(FooterSocial.is, FooterSocial);
