@@ -41,10 +41,8 @@ const polymerJson = require(config.polymerJsonPath);
 const buildPolymerJson = {
   entrypoint: prependPath(config.tempDirectory, polymerJson.entrypoint),
   shell: prependPath(config.tempDirectory, polymerJson.shell),
-  fragments: polymerJson.fragments.reduce((res, el) =>
-    [...res, prependPath(config.tempDirectory, el)], []),
-  sources: polymerJson.sources.reduce((res, el) =>
-    [...res, prependPath(config.tempDirectory, el)], []),
+  fragments: polymerJson.fragments.reduce((res, el) => [...res, prependPath(config.tempDirectory, el)], []),
+  sources: polymerJson.sources.reduce((res, el) => [...res, prependPath(config.tempDirectory, el)], []),
   extraDependencies: polymerJson.extraDependencies,
 };
 
@@ -108,9 +106,9 @@ function build() {
         return polymerBuild.addServiceWorker({
           project: polymerProject,
           buildRoot: prependPath(
-            config.build.rootDirectory,
-            config.tempDirectory
-          )
+              config.build.rootDirectory,
+              config.tempDirectory
+            )
             .replace('\\', '/'),
           bundled: config.build.bundled,
           swPrecacheConfig,
@@ -131,9 +129,9 @@ function build() {
       })
       .then(() => {
         return gulp.src(prependPath(
-          config.build.rootDirectory,
-          'service-worker.js'
-        ))
+            config.build.rootDirectory,
+            'service-worker.js'
+          ))
           .pipe(uglify())
           .pipe(gulp.dest(config.build.rootDirectory));
       })
@@ -146,10 +144,10 @@ function build() {
 
 function lint() {
   return gulp.src([
-    `scripts/**/*.js`,
-    `src/**/*.{html,js}`,
-    'index.html',
-  ])
+      `scripts/**/*.js`,
+      `src/**/*.{html,js}`,
+      'index.html',
+    ])
     .pipe(eslint())
     .pipe(eslint.format(friendlyFormatter))
     .pipe(eslint.failAfterError());
@@ -184,11 +182,11 @@ function compileTemplate() {
 
 function copyStatic() {
   return gulp.src([
-    'data/**/*.{markdown,md}',
-    'images/**/*.{png,gif,jpg,svg}',
-  ], {
-    base: '.',
-  })
+      'data/**/*.{markdown,md}',
+      'images/**/*.{png,gif,jpg,svg}',
+    ], {
+      base: '.',
+    })
     .pipe(gulp.dest(config.tempDirectory));
 }
 
@@ -209,7 +207,8 @@ function getConfigPath() {
 }
 
 gulp.task('default', build);
-gulp.task('default', gulp.series(lint, build));
+//gulp.task('default', gulp.series(lint, build));
+gulp.task('default', gulp.series(build));
 
 gulp.task('lint', lint);
 gulp.task('deploy', deploy);
