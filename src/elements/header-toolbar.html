@@ -47,9 +47,12 @@
 
       .nav-items {
         --paper-tabs-selection-bar-color: var(--default-primary-color);
+
         --paper-tabs: {
           height: 64px;
-        };
+        }
+
+        ;
       }
 
       .nav-item a,
@@ -125,25 +128,15 @@
 
     <app-toolbar class="header">
       <div>
-        <paper-icon-button
-          icon="hoverboard:menu"
-          hidden$="[[viewport.isLaptopPlus]]"
-          aria-label="menu"
-          on-tap="openDrawer"
-        ></paper-icon-button>
+        <paper-icon-button icon="hoverboard:menu" hidden$="[[viewport.isLaptopPlus]]" aria-label="menu"
+          on-tap="openDrawer"></paper-icon-button>
       </div>
       <div layout horizontal center flex>
         <a class="toolbar-logo" href="/" hidden$="[[!viewport.isLaptopPlus]]" layout horizontal title="{$ title $}"></a>
       </div>
 
-      <paper-tabs
-        class="nav-items"
-        selected="[[route.route]]"
-        attr-for-selected="name"
-        hidden$="[[!viewport.isLaptopPlus]]"
-        role="navigation"
-        noink
-      >
+      <paper-tabs class="nav-items" selected="[[route.route]]" attr-for-selected="name"
+        hidden$="[[!viewport.isLaptopPlus]]" role="navigation" noink>
         {% for nav in navigation %}
         <paper-tab name="{$ nav.route $}" class="nav-item" link>
           <a href="{$ nav.permalink $}" layout vertical center-center>{$ nav.label $}</a>
@@ -152,23 +145,16 @@
 
         <paper-tab class="signin-tab" on-tap="signIn" link hidden$="[[user.signedIn]]">{$ signIn $}</paper-tab>
 
-        <a href$="[[_getTicketUrl(tickets)]]" target="_blank" rel="noopener noreferrer" ga-on="click"
+        <!-- <a href$="[[_getTicketUrl(tickets)]]" target="_blank" rel="noopener noreferrer" ga-on="click"
            ga-event-category="ticket button" ga-event-action="buy_click">
           <paper-button class="buy-button" primary>{$ buyTicket $}</paper-button>
-        </a>
+        </a> -->
       </paper-tabs>
 
-      <paper-menu-button
-        id="notificationsMenu"
-        class="notifications-menu"
-        vertical-align="top"
-        horizontal-align="right"
-        no-animations
-      >
-        <paper-icon-button
-          icon="hoverboard:[[_getNotificationsIcon(notifications.status)]]"
-          slot="dropdown-trigger"
-        ></paper-icon-button>
+      <paper-menu-button id="notificationsMenu" class="notifications-menu" vertical-align="top" horizontal-align="right"
+        no-animations>
+        <paper-icon-button icon="hoverboard:[[_getNotificationsIcon(notifications.status)]]" slot="dropdown-trigger">
+        </paper-icon-button>
         <div class="dropdown-panel" slot="dropdown-content">
           <div hidden$="[[_hideNotificationBlock(notifications.status, 'DEFAULT')]]">
             <p>{$ notifications.default $}</p>
@@ -194,22 +180,12 @@
         </div>
       </paper-menu-button>
 
-      <paper-menu-button
-        class="auth-menu"
-        hidden$="[[!user.signedIn]]"
-        vertical-align="top"
-        horizontal-align="right"
-        no-animations
-        layout horizontal center-center>
-        <div
-          class="profile-image" slot="dropdown-trigger"
-          style$="background-image: url('[[user.photoURL]]')"
-        ></div>
+      <paper-menu-button class="auth-menu" hidden$="[[!user.signedIn]]" vertical-align="top" horizontal-align="right"
+        no-animations layout horizontal center-center>
+        <div class="profile-image" slot="dropdown-trigger" style$="background-image: url('[[user.photoURL]]')"></div>
         <div class="dropdown-panel profile-details" slot="dropdown-content" layout horizontal>
-          <div
-            class="profile-image" slot="dropdown-trigger" self-center
-            style$="background-image: url('[[user.photoURL]]')"
-          ></div>
+          <div class="profile-image" slot="dropdown-trigger" self-center
+            style$="background-image: url('[[user.photoURL]]')"></div>
           <div layout vertical center-justified>
             <span class="profile-name">[[user.displayName]]</span>
             <span class="profile-email">[[user.email]]</span>
@@ -218,17 +194,13 @@
         </div>
       </paper-menu-button>
 
-      <paper-icon-button
-        icon="hoverboard:account"
-        on-tap="signIn"
-        hidden$="[[_isAccountIconHidden(user.signedIn, viewport.isLaptopPlus)]]"
-      ></paper-icon-button>
+      <paper-icon-button icon="hoverboard:account" on-tap="signIn"
+        hidden$="[[_isAccountIconHidden(user.signedIn, viewport.isLaptopPlus)]]"></paper-icon-button>
     </app-toolbar>
 
   </template>
 
   <script>
-
     class HeaderToolbar extends ReduxMixin(Polymer.Element) {
       static get is() {
         return 'header-toolbar';
@@ -317,11 +289,11 @@
       }
 
       _getNotificationsIcon(status) {
-        return status === NOTIFICATIONS_STATUS.DEFAULT
-          ? 'bell-outline'
-          : status === NOTIFICATIONS_STATUS.GRANTED
-            ? 'bell'
-            : 'bell-off';
+        return status === NOTIFICATIONS_STATUS.DEFAULT ?
+          'bell-outline' :
+          status === NOTIFICATIONS_STATUS.GRANTED ?
+          'bell' :
+          'bell-off';
       }
 
       _hideNotificationBlock(status, blockStatus) {
@@ -353,5 +325,6 @@
     }
 
     customElements.define(HeaderToolbar.is, HeaderToolbar);
+
   </script>
 </dom-module>

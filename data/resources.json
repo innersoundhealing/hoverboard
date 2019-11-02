@@ -28,11 +28,9 @@
     "title": "My Schedule",
     "browseSession": "Browse sessions"
   },
-  "footerRelBlock": [
-    {
+  "footerRelBlock": [{
       "title": "",
-      "links": [
-        {
+      "links": [{
           "name": "",
           "url": "http://lviv.gdg.org.ua/",
           "newTab": true
@@ -56,8 +54,7 @@
     },
     {
       "title": "",
-      "links": [
-        {
+      "links": [{
           "name": "",
           "url": "http://gdg-devfest-ua.appspot.com/",
           "newTab": true
@@ -81,8 +78,7 @@
     },
     {
       "title": "",
-      "links": [
-        {
+      "links": [{
           "name": "",
           "url": "https://devfest.gdg.org.ua/assets/GDG_DevFest_2016_partnership_proposition.pdf",
           "newTab": true
@@ -116,11 +112,11 @@
     "title": "Klankschalen en hun helende kracht",
     "callToAction": {
       "featuredSessions": {
-        "description":"Sta je weleens stil om te luisteren naar je innerlijke stem? Je lichaam maakt vaak genoeg geluiden om je te vertellen over wat je nodig hebt of wat je juist beter zou kunnen laten: energie in- en uitvoer, de balans van de chakra’s, maar hoor je deze geluiden ook? Tijdens mijn meditaties schenken we hier aandacht aan. Vaak komen mensen helemaal niet aan pauze toe in hun drukke dagelijkse bestaan en kunnen ze op den duur vermoeidheid, slaapproblemen of emotionele disbalans ervaren. Klankschalen kunnen je hierbij helpen. Door klankschalen aan te slaan of te bestrijken geeft de schaal een klank en een trilling af. De klanken zorgen ervoor dat je in een meditatieve staat terechtkomt, in je onderbewustzijn. De trillingen zijn krachtig en verplaatsten zich snel door ons lichaam. Omdat het lichaam voor 80% uit water bestaat bewegen al je cellen mee en dit zorgt voor een innerlijke massage. Je zintuigen staan op scherp terwijl je lichaam zich diep kan ontspannen en om de energieën in je lichaam weer te laten stromen waar wellicht blokkades zitten.",
+        "description": "Sta je weleens stil om te luisteren naar je innerlijke stem? Je lichaam maakt vaak genoeg geluiden om je te vertellen over wat je nodig hebt of wat je juist beter zou kunnen laten: energie in- en uitvoer, de balans van de chakra’s, maar hoor je deze geluiden ook? Tijdens mijn meditaties schenken we hier aandacht aan. Vaak komen mensen helemaal niet aan pauze toe in hun drukke dagelijkse bestaan en kunnen ze op den duur vermoeidheid, slaapproblemen of emotionele disbalans ervaren. Klankschalen kunnen je hierbij helpen. Door klankschalen aan te slaan of te bestrijken geeft de schaal een klank en een trilling af. De klanken zorgen ervoor dat je in een meditatieve staat terechtkomt, in je onderbewustzijn. De trillingen zijn krachtig en verplaatsten zich snel door ons lichaam. Omdat het lichaam voor 80% uit water bestaat bewegen al je cellen mee en dit zorgt voor een innerlijke massage. Je zintuigen staan op scherp terwijl je lichaam zich diep kan ontspannen en om de energieën in je lichaam weer te laten stromen waar wellicht blokkades zitten.",
         "label": "Meer weten over klankschalen",
         "link": "https://www.youtube.com/playlist?list=PLt8lEzcLNl31AouwDkbLbLARlQFwNS2en"
-    }
-  },
+      }
+    },
     "statisticsBlock": {
       "attendees": {
         "label": "Zoveel jaar worden klankschalen gebruikt in het westen",
@@ -196,9 +192,9 @@
     }
   },
   "galleryBlock": {
-    "title": "Singing bowls",
-    "description": "Kom jij een keer de kracht van klankschalen ervaren?"
-    },
+    "title": "Klank is engergie!",
+    "description": "Klankmassage zet een verinnerlijkingsproces in werking dat je uitnodigt om te luisteren naar de geluiden of boodschappen die je innerlijke stem afgeeft. Ze openen de weg naar persoonlijke bewustwording en groei."
+  },
   "mapBlock": {
     "title": "Location"
   },
@@ -250,8 +246,7 @@
   },
   "aboutOrganizerBlock": {
     "image": "/images/home-hero-product-image.jpg",
-    "blocks": [
-      {
+    "blocks": [{
         "title": "Wie ben ik",
         "description": "Lees hier over hoe ik in Nepal geinspireerd ben geraakt door de klankschalen.",
         "callToAction": {
