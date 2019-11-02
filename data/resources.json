@@ -259,9 +259,7 @@
         "description": "Ik bied chakra soundhealing, deep tissue soundmassage en aura cleansing aan. Klik hieronder om meer over deze therapie vormen te lezen.",
         "callToAction": {
           "label": "Lees meer over de therapievormen",
-          "link": "https://developers.google.com/groups/",
-          "newTab": true
-        }
+          "link": "/blog/posts/vormen-klankschalentherapie"}
       }
     ]
   },
