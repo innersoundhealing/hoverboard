@@ -192,7 +192,7 @@
     }
   },
   "galleryBlock": {
-    "title": "Klank is engergie!",
+    "title": "Klank is energie!",
     "description": "Klankmassage zet een verinnerlijkingsproces in werking dat je uitnodigt om te luisteren naar de geluiden of boodschappen die je innerlijke stem afgeeft. Ze openen de weg naar persoonlijke bewustwording en groei."
   },
   "mapBlock": {
@@ -247,19 +247,20 @@
   "aboutOrganizerBlock": {
     "image": "/images/home-hero-product-image.jpg",
     "blocks": [{
-        "title": "Wie ben ik",
-        "description": "Lees hier over hoe ik in Nepal geinspireerd ben geraakt door de klankschalen.",
+        "title": "Kom meer over mij te weten",
+        "description": "Welkom op mijn website, leuk dat je komt kijken! Ik ben Anne, ik ben 28 jaar en woon in Den Haag, Nederland. Al op vroege leeftijd... ",
         "callToAction": {
           "label": "Kom meer over mij te weten",
           "link": "/about"
         }
       },
       {
-        "title": "Verschillende vormen klankschalentherapie",
-        "description": "Ik bied chakra soundhealing, deep tissue soundmassage en aura cleansing aan. Klik hieronder om meer over deze therapie vormen te lezen.",
+        "title": "Lees meer over de verschillende vormen klankschalensessies die ik geef",
+        "description": "Tijdens mijn sessies heb ik aandacht voor jou en stem ik me af op wat jij op dat moment nodig hebt. Ik zal starten met een meditatie en daarna zal ik je meenemen op een reis van klanken, geluiden en geuren. Je kan kiezen voor een chakra klankschalen sessie, een deep tissue klankmassage of een aura cleansing....",
         "callToAction": {
-          "label": "Lees meer over de therapievormen",
-          "link": "/blog/posts/vormen-klankschalentherapie"}
+          "label": "Meer informatie over wat ik aanbied",
+          "link": "/blog/posts/vormen-klankschalentherapie"
+        }
       }
     ]
   },
